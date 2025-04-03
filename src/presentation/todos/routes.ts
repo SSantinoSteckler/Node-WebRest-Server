@@ -8,7 +8,7 @@ export class TodoRoutes {
 
     router.get('/', (req, res) => todoController.getTodos(req, res));
 
-    // router.get('/:id', (req, res) => todoController.getTodoById(req, res));
+    router.get('/:id', (req, res): any => todoController.getTodoById(req, res));
 
     router.post('/', (req, res): any => todoController.createTodo(req, res));
     router.put('/:id', (req, res): any => todoController.updateTodo(req, res));
